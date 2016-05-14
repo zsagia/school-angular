@@ -31,4 +31,16 @@
 	app.controller('StoreController', function() {
 		this.products = gems;
 	});
+
+	ap..controller('TabController', function() {
+		this.tab = 1;
+
+		this.setTab = function(value) {
+			this.tab = value;
+		};
+
+		this.isSet = function(value) {
+			return this.tab === value;
+		};
+	});
 })();
