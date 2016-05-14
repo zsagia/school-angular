@@ -32,7 +32,7 @@
 		this.products = gems;
 	});
 
-	ap..controller('TabController', function() {
+	app.controller('TabController', function() {
 		this.tab = 1;
 
 		this.setTab = function(value) {
