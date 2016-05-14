@@ -4,14 +4,13 @@
 		<link rel="stylesheet" type="text/css" href="../../bower_components\bootstrap\dist\css\bootstrap.min.css">
 	</head>
 	<body ng-controller="StoreController as store">
-		<div class="product" ng-hide="store.product.soldOut">
+		<div class="product" ng-repeat="product in store.products">
 			<h3>
-				{{store.product.name}}
+				{{product.name}}
 				<em class="pull-right">
-					{{store.product.price}}
+					{{product.price}}
 				</em>
 			</h3>
-			<button ng-show="store.product.canPurchase">Add to Cart</button>
 		</div>
 		<script type="text/javascript" src="../../bower_components\angular\angular.min.js"></script>
 		<script type="text/javascript" src="./app.js"></script>
