@@ -1,7 +1,9 @@
 (function() {
 	var gem = {
 		name: 'Azurite',
-		price: 2.95
+		price: 2.95,
+		canPurchase: false,
+		soldOut: true
 	};
 
 	var app = angular.module('gemStore', []);
