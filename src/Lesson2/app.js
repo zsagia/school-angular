@@ -43,4 +43,12 @@
 			return this.tab === value;
 		};
 	});
+
+	app.controller('GalleryController', function() {
+		this.current = 0;
+
+		this.setCurrent = function(value) {
+			this.current = value || 0;
+		};
+	});
 })();
