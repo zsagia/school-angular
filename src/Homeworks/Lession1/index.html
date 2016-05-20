@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="zsfootball">
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../../bower_components\bootstrap\dist\css\bootstrap.min.css">
+	</head>
+	<body ng-controller="RoundController as round">
+		<header>
+			<h1>
+				{{round.round.competition.title}}
+				<em>
+					{{round.round.competition.season.title}}
+				</em>
+			</h1>
+		</header>
+		<div class="match" ng-repeat="match in round.matches">
+			<h3>
+				{{match.homeClub}} - {{match.awayClub}} ({{round.getHomeGoals(match)}} - {{round.getAwayGoals(match)}})
+			</h3>
+		</div>
+		<script type="text/javascript" src="../../../bower_components\angular\angular.min.js"></script>
+		<script type="text/javascript" src="./app.js"></script>
+	</body>
+</html>
